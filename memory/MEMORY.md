@@ -1,0 +1,3 @@
+- [AIAgent 学习路线图](Tutorial/AIAgent学习路线图.md) — 基于 super_biz_agent_py 项目的 LangChain/RAG/MCP/AIOps 学习路线
+- [AIAgent 30 节课程大纲](Tutorial/AIAgent30节课程大纲.md) — 30 节课完整覆盖项目所有知识点
+- [AIAgent 第 1-3 课详细讲义](Tutorial/AIAgent第1-3课详细讲义.md) — 项目架构、环境搭建、服务启动与接口体验
