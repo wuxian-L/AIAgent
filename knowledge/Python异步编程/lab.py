@@ -21,6 +21,7 @@ for i in range(5):
     task(i)
 print(f"同步总耗时：{time.time() - start:.2f}秒")
 '''
+'''
 import asyncio
 import time
 async def task(n):
@@ -31,8 +32,24 @@ async def main():
 start = time.time()
 asyncio.run(main())
 print(f"异步总耗时：{time.time() - start:.3f}秒")
+'''
+#并发请求多个URL
+async def fetch(client, url):
+    resp = await client.get(url)
+    return len(resp.text)
 
-
+async def main():
+    urls = [
+        "https://www.example.com",
+        "https://www.baidu.com",
+        "https://www.bing.com"
+    ]
+    #同一个client，连接复用
+    async with httpx.AsyncClient() as client:
+        tasks = [fetch(client, url) for url in urls]
+        results = await asyncio.gather(*tasks)
+    print(results)
+asyncio.run(main())
 
 
 
