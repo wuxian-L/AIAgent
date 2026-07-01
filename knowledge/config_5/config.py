@@ -50,9 +50,14 @@ class Settings(BaseSettings):
     port:int = 9900
     
     #DashScope配置 阿里云百炼平台
-    dashscope_api_key:str = ""
+    dashscope_api_key:str = "sk-xxxxxxxxxxxxxxxxxxxxxxxx"
     dashscope_model:str = "qwen-max"
     dashscope_embedding_model:str = "text-embedding-v4"
+    #Deepseek配置
+    deepseek_api_key:str = "sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+    deepseek_model:str = "text-embedding-v4"
+    deepseek_base_url:str = "https://api.deepseek.cn"
+
 
     #Milvus配置
     milvus_host:str = "localhost"

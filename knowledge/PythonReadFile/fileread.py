@@ -15,3 +15,8 @@ def readFile(self,file_path:str):
 
     except Exception as e:
         logger.error(e)
+
+###################################
+from pathlib import Path
+KNOWLEDGE_DIR = Path(__file__).resolve().parent.parent
+CONFIG_DIR = KNOWLEDGE_DIR / "config_5/config.py"
